@@ -1,0 +1,227 @@
+
+.fiche-film {
+
+  margin: 30px 0;
+
+  color: white;
+
+  width: 100%;
+
+  box-shadow: 0 25px 30px rgba(0, 0, 0, 0.5);
+
+  .info {
+
+    display: flex;
+
+    .conteneur-info {
+
+      display: flex;
+
+      position: relative;
+      .gauche {
+
+      }
+
+      .droite {
+
+        min-width: 40%;
+
+        tbody {
+          padding-top: 50px;
+          display: flex;
+
+          tr {
+            padding-right: 20px;
+            min-width: 90px;
+            min-height: 90px;
+            display: flex;
+            flex-direction: column;
+          }
+
+        }
+
+      }
+
+    }
+
+    div {
+      padding: 30px;
+    }
+
+    img {
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+      transition: all 0.5s;
+
+      &:hover {
+        transform: scale(1.1);
+        //  transform: scaleY(1.3);
+      }
+    }
+  }
+}
+
+.film .affiche, .fiche-film .affiche {
+  width: 200px;
+}
+
+.liste-acteurs {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+  min-height: 225px;
+
+  img {
+    //  max-width: 300px;
+    //  padding: 0 20px;
+  }
+
+  .acteur {
+
+    h3 {
+      text-align: center;
+      color: white;
+
+    }
+
+  }
+
+  .card {
+
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 1);
+
+    position: relative;
+    width: 150px;
+    height: 225px;
+
+    margin: 30px;
+
+    &:hover {
+      box-shadow: 0 0 0;
+    }
+
+    .face {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.face1 {
+  top: 0;
+  left: 0;
+  transition: left, z-index, transform;
+  transition-delay: 0s, .5s, .5s;
+  transition-duration: .5s, 0s, .5s;
+  z-index: 2;
+  transform: translate(-10px, -10px);
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.card:hover .face.face1 {
+  transition: transform, z-index, left;
+  transition-delay: 0s, .5s, .5s;
+  transition-duration: .5s, 0s, .5s;
+  transform: translate(70px, 0px);
+  z-index: 1;
+  left: -60px;
+}
+
+.face2 {
+  background-color: $theme-mauve;
+  top: 0;
+  left: 0;
+  transition: left, z-index, transform;
+  transition-delay: 0s, .5s, .5s;
+  transition-duration: .5s, 0s, .5s;
+  z-index: 1;
+
+}
+
+.card:hover .face.face2 {
+  transition: transform, z-index, left;
+  transition-delay: 0s, .5s, .5s;
+  transition-duration: .5s, 0s, .5s;
+  transform: translate(-60px, -10px);
+  z-index: 2;
+  left: 60px;
+}
+
+tr:nth-child(2) {
+  td:first-child {
+    text-transform: uppercase;
+  }
+}
+
+h3.acteurs {
+  padding-left: 30px;
+}
+
+@media screen and (max-width: $breakpoint-lg) {
+  .fiche-film {
+
+    width: 100vw;
+
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+    .info {
+      flex-direction: column;
+      & > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+          width: 60vw;
+        }
+      }
+
+      .conteneur-info {
+
+        h1 {
+          font-size: rem(30);
+        }
+
+        font-size: rem(24);
+        line-height: 1.5;
+
+        tr {
+
+          width: 200px;
+        }
+        td {
+
+          padding: 10px 0;
+        }
+      }
+
+    }
+
+
+
+    .liste-acteurs{
+width: 900px;
+      align-items: center;
+
+       .acteur{
+      width: 350px;
+
+         min-height: 400px;
+
+      }
+
+    }
+
+
+  }
+}

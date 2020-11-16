@@ -1,0 +1,36 @@
+// TOOLS
+@import "tools/functions";
+
+// SETTINGS
+@import "variables/global";
+@import "variables/dimensions";
+@import "variables/fonts";
+@import "variables/colors";
+
+// GENERIC
+@import "generic/box-sizing";
+
+// BASE
+@import "base/body";
+@import "base/headings";
+@import "base/images";
+@import "base/links";
+//@import "base/hr";
+@import "base/wrapper";
+//@import "base/form";
+
+// COMPONENTS
+@import "components/carrousel";
+@import "components/liste-films";
+@import "components/fiche-film";
+@import "components/template";
+@import "components/header";
+@import "components/footer";
+
+
+// UTILITIES
+@import "utilities/hide";
+@import "utilities/print";
+
+
+

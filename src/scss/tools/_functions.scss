@@ -1,0 +1,13 @@
+//FONCTION POUR CALCUL DES REMS
+@function rem($fs){
+  @return ($fs / 16) + rem;
+}
+
+
+//MIXIN POUR AJOUTER UNE FONT
+@mixin font($family, $size: 'inherit', $color: #000, $line-height: 1.2) {
+  font-family: $family;
+  font-size: $size;
+  color: $color;
+  line-height: $line-height;
+}

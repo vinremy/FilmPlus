@@ -1,0 +1,142 @@
+header {
+  background-color:$theme-dark;
+
+  border-bottom:solid 6px $theme-bleu;
+
+  box-shadow: 0 0 20px 0 rgba(0,0,0,1);
+
+  position:fixed;
+  top:0;
+
+  z-index:6;
+
+  width:100%;
+
+  div {
+    color:$theme-rose;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+
+    text-transform:uppercase;
+
+    &:hover ul {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+    &>a {
+      display:flex;
+      align-items:center;
+
+      height:67px;
+
+      background: linear-gradient($theme-dark 50%, $theme-rose 50% );
+      background-repeat: repeat;
+      background-size: 100% 200%;
+      transition: all 0.2s linear;
+
+      &:hover {
+        background-color:$theme-rose;
+        background-position: 0 +100%;
+
+        transition:all 0.2s linear;
+
+        div {
+          transition:all 0.2s linear;
+
+          color:$theme-bleu;
+        }
+      }
+
+      h1 {
+        margin:0;
+        padding-left:20px;
+      }
+
+      i {
+        font-size:rem(24);
+      }
+    }
+
+    ul {
+      margin:0;
+      padding:0;
+
+      list-style:none;
+
+      display:none;
+
+      a {
+
+        background: linear-gradient($theme-dark 50%, $theme-rose 50% );
+        background-repeat: repeat;
+        background-size: 100% 200%;
+        transition: all 0.2s linear;
+
+        font-size:rem(18);
+        font-weight:700;
+
+        li {
+          border-right:solid 1px $theme-bleu;
+          border-left:solid 1px $theme-bleu;
+
+          padding:12px 20px;
+          margin:8px 0;
+
+          width:100vw;
+        }
+
+        &:hover {
+          background-color:$theme-rose;
+          background-position: 0 +100%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:$breakpoint-sm) {
+  header div {
+    flex-direction:row;
+
+    &>a {
+      div {
+        padding-right:20px;
+        padding-left:20px;
+
+        height:51px;
+
+        border-right: solid 2px $theme-bleu;
+        border-left: solid 2px $theme-bleu;
+      }
+    }
+
+    &:hover ul {
+      display:flex;
+      flex-direction: row;
+    }
+
+    ul {
+      display:flex;
+      flex-direction: row;
+
+      a {
+        li {
+          width:100%;
+
+          &:first-child li {
+            border-left:solid 2px $theme-bleu;
+          }
+
+          &:last-child li {
+            border-right:solid 2px $theme-bleu;
+          }
+        }
+      }
+    }
+  }
+}

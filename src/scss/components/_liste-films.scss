@@ -1,0 +1,157 @@
+.liste-films {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  article {
+    text-align:center;
+
+    background-color: $theme-mauve;
+
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
+
+    flex-basis: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px black solid;
+
+    max-height: 700px;
+    position: relative;
+
+    overflow:hidden;
+
+    a{
+      color: white;
+
+      &:hover{
+        color: $theme-bleu;
+      }
+    }
+
+
+    h1{
+      top: 0;
+      font-size: rem(30);
+      color:$theme-light;
+    }
+
+    h3 {
+      padding:0;
+      color:$theme-light;
+    }
+
+    img {
+      //  border-top:solid 6px $theme-bleu;
+      //  border-bottom:solid 6px $theme-bleu;
+
+    }
+
+    p {
+
+     max-width: 300px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color:$theme-dark;
+
+      &:hover {
+        color:$theme-dark;
+      }
+
+    }
+
+    .image {
+
+      //width: 500px;
+      //height: 750px;
+    }
+
+    .content {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      padding: 10px;
+      width: 100%;
+      bottom: -5%;
+      background:linear-gradient(to top,$theme-rose,transparent);
+      opacity: 0;
+      transition: all .5s;
+      overflow: hidden;
+      box-sizing: border-box;
+      color: darken($theme-mauve, 35%);
+      font-size: rem(20);
+      max-height: 700px;
+
+    }
+
+  }
+
+  article:hover .content {
+
+    bottom: 0;
+    opacity: 1;
+
+  }
+
+  article:hover img {
+    opacity: 0.3;
+    transition: opacity 0.5s;
+  }
+
+}
+
+@media screen and (min-width:$breakpoint-sm) {
+  .liste-films {
+    article {
+      flex-basis:50%;
+
+    }
+  }
+}
+
+@media screen and (min-width:$breakpoint-md) {
+  .liste-films {
+    article {
+      flex-basis:30%;
+      padding: 20px;
+     ;
+    }
+  }
+}
+
+
+@media screen and (max-width:$breakpoint-lg) {
+  .liste-films {
+    article {
+      p{
+        width: 160px;
+
+      }
+
+      .content{
+
+        max-height: 500px;
+
+        h3{
+
+         margin: 0;
+        }
+
+
+
+      }
+    }
+  }
+
+
+
+}

@@ -1,0 +1,51 @@
+footer {
+  background-color:$theme-dark;
+
+
+
+  border-top:solid 6px $theme-bleu;
+
+  color:$theme-rose;
+
+  padding-left:60px;
+  padding-right:60px;
+
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+
+  box-shadow: 0 0 20px 0 rgba(0,0,0,1);
+
+  div {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+
+    img {
+    height:48px;
+    width:48px;
+  }
+
+    &>i {
+      font-size:48px;
+      margin-left:60px;
+      transition:all 0.2s;
+
+      &:hover {
+        transition:all 0.2s;
+        color:$theme-bleu;
+      }
+    }
+
+    a {
+      i {
+        font-size:36px;
+        padding:10px;
+      }
+    }
+
+    p {
+      padding-left:20px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+// STYLE DE BASE DE TOUS LES LIENS ET BOUTON DU SITE
+
+a{
+  transition:all 0.4s;
+
+  &:link{
+    color: $theme-rose;
+    text-decoration: none;
+  }
+
+  &:visited{
+    color: $theme-rose;
+  }
+
+  &:hover{
+    color: $theme-bleu;
+    text-decoration: none;
+  }
+
+  &:active{
+    color: $theme-bleu;
+  }
+
+  &:focus{
+    color: $theme-bleu;
+  }
+}

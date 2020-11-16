@@ -1,0 +1,11 @@
+// STYLE DE BASE SUR LA BALISE BODY
+
+body{
+
+  @include font($ff-normal, $fz-normal, $color-text-normal, $lh-normal);
+
+  background-color: $theme-dark;
+
+  padding-top:70px;
+
+}
